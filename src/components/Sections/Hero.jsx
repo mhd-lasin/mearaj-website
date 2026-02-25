@@ -1,6 +1,16 @@
 import React from 'react'
 import heroImage from "../../assets/img/hero-kandura.jpg"
 const Hero = () => {
+    const statsData = [
+        {
+            value: "20+",
+            label: "Years Exp"
+        },
+        {
+            value: "100%",
+            label: "Perfect Fit"
+        }
+    ]
     return (
         <>
             <section id="home" className="relative min-h-screen flex items-center pt-24 pb-16 lg:pt-32 overflow-hidden bg-brand-cream">
@@ -41,15 +51,13 @@ const Hero = () => {
                             </div>
 
                             <div className="flex items-center gap-6 pt-8 border-t border-brand-gold/20">
-                                <div>
-                                    <p className="font-serif text-2xl font-bold text-brand-black">20+</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-brand-charcoal/50">Years Exp</p>
-                                </div>
+                                {statsData.map((stat, index) => (
+                                    <div key={index}>
+                                        <p className="font-serif text-2xl font-bold text-brand-black">{stat.value}</p>
+                                        <p className="text-[10px] uppercase tracking-wider text-brand-charcoal/50">{stat.label}</p>
+                                    </div>
+                                ))}
                                 <div className="w-px h-8 bg-brand-gold/20"></div>
-                                <div>
-                                    <p className="font-serif text-2xl font-bold text-brand-black">100%</p>
-                                    <p className="text-[10px] uppercase tracking-wider text-brand-charcoal/50">Perfect Fit</p>
-                                </div>
                             </div>
                         </div>
 
