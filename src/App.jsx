@@ -10,6 +10,7 @@ import Features from './components/Sections/Features'
 import Location from './components/Sections/Location'
 import Contact from './components/Sections/Contact'
 import Footer from './components/Layout/Footer'
+import WhatsAppButton from './components/Sections/WhatsAppButton'
 const App = () => {
   return (
     <>
@@ -25,6 +26,7 @@ const App = () => {
         <Location />
         <Contact />
         <Footer />
+        <WhatsAppButton />
       </div>
     </>
   )
